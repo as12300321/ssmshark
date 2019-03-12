@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TimerController {
     @RequestMapping("/timer")
     public String index(){
+        System.out.println("test");
         return "timer";
     };
 }
