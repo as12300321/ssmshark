@@ -1,4 +1,4 @@
-package com.shark.shark;
+package com.shark;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.shark.shark.controller;
+package com.shark.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

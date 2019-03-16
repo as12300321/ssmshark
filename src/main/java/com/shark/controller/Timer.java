@@ -1,4 +1,4 @@
-package com.shark.shark.controller;
+package com.shark.controller;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,17 +17,17 @@ public class Timer extends JFrame {
  
     private static final String INITIAL_LABEL_TEXT = "00:00:00";
     private static final String INITIAL_LABEL_TEXT2 = "黑椒鲨鱼学习计时器：";
-    // 计数线程  
-    private CountingThread thread = new CountingThread();  
+
+    private CountingThread thread = new CountingThread();
    
-    // 记录程序开始时间  
-    private long programStart = System.currentTimeMillis();  
+
+    private long programStart = System.currentTimeMillis();      // 记录程序开始时间
    
-    // 程序一开始就是暂停的  
-    private long pauseStart = programStart;  
+
+    private long pauseStart = programStart;      // 程序一开始就是暂停的
    
-    // 程序暂停的总时间  
-    private long pauseCount = 0;  
+
+    private long pauseCount = 0;     // 程序暂停的总时间
    
     private JLabel label = new JLabel(INITIAL_LABEL_TEXT);
     private JLabel label2 = new JLabel(INITIAL_LABEL_TEXT2);
@@ -35,7 +35,8 @@ public class Timer extends JFrame {
    
     private JButton resetButton = new JButton("清零");  
    
-    private ActionListener startPauseButtonListener = new ActionListener() {  
+    private ActionListener startPauseButtonListener = new ActionListener() {
+        boolean test(String myString) { return myString.isEmpty(); }
         public void actionPerformed(ActionEvent e) {  
             if (thread.stopped) {  
                 pauseCount += (System.currentTimeMillis() - pauseStart);  

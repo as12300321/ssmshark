@@ -1,4 +1,4 @@
-package com.shark.shark.controller;
+package com.shark.controller;
 
 import java.util.ArrayList;
 import java.util.List;
