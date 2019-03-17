@@ -81,7 +81,7 @@ public class Timer extends JFrame {
     // 为窗体面板添加边框  
     private void setupBorder() {  
         JPanel contentPane = new JPanel(new BorderLayout());  
-        contentPane.setBorder(BorderFactory.createEmptyBorder(20, 100, 20, 100));
+        contentPane.setBorder(BorderFactory.createEmptyBorder(20, 80, 20, 80));
         this.setContentPane(contentPane);  
     }  
    
@@ -96,12 +96,12 @@ public class Timer extends JFrame {
     // 配置标签  
     private void setupLabel() {
         label.setHorizontalAlignment(SwingConstants.CENTER);
-        label.setFont(new Font(label.getFont().getName(), label.getFont().getStyle(), 80));
+        label.setFont(new Font(label.getFont().getName(), label.getFont().getStyle(), 50));
         this.add(label, BorderLayout.CENTER);
     }
     private void setupLabel2() {
         label2.setHorizontalAlignment(SwingConstants.CENTER);
-        label2.setFont(new Font(label.getFont().getName(), label.getFont().getStyle(), 60));
+        label2.setFont(new Font(label.getFont().getName(), label.getFont().getStyle(), 40));
         this.add(label2, BorderLayout.WEST);
     }
     // 程序入口  
@@ -112,7 +112,7 @@ public class Timer extends JFrame {
             e.printStackTrace();  
         }  
    
-        Timer frame = new Timer("嘿嘿嘿嘿计时器");
+        Timer frame = new Timer("黑椒鲨鱼计时器");
         frame.pack();  
         frame.setVisible(true);  
     }  
