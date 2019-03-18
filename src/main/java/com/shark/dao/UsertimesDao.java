@@ -1,4 +1,4 @@
-package com.shark.daos;
+package com.shark.dao;
 
 public interface UsertimesDao {
 

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/*
 @Controller
 public class HomeController {
     @Autowired
@@ -15,10 +16,8 @@ public class HomeController {
 
         return "index";
     }
-    @RequestMapping("getUser/{id}")
-    public String GetUser(@PathVariable int id){
-        String s = userService.Sel(id).toString();
-        System.out.println(s);
-        return s;
-    }
+*/
+
+/*
 }
+*/

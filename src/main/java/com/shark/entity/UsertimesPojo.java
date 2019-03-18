@@ -1,6 +1,6 @@
 package com.shark.entity;
 
-public class Usertimes {
+public class UsertimesPojo {
     private int id;
     private String username;
     private String event_ts;
@@ -68,7 +68,7 @@ public class Usertimes {
         this.flag = flag;
     }
 
-    public Usertimes(int id, String username, String event_ts, String insert_ts, int daytimes, String flag) {
+    public UsertimesPojo(int id, String username, String event_ts, String insert_ts, int daytimes, String flag) {
         this.id = id;
         this.username = username;
         this.event_ts = event_ts;

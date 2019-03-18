@@ -1,10 +1,10 @@
 package com.shark.mapper;
 
-import com.shark.entity.Usertimes;
+import com.shark.entity.UsertimesPojo;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UsertimesMapper {
-    Usertimes SelectAll();
-    Usertimes SelectById(int id);
+    UsertimesPojo SelectAll();
+    UsertimesPojo SelectById(int id);
 }
