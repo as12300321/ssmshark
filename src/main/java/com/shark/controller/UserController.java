@@ -28,7 +28,7 @@ public class UserController {
     public String GetUserAll(){
         String all = userService.SelectAll().toString();
         System.out.println(all);
-        
+
         return all;
     }
 }
