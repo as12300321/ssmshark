@@ -26,7 +26,6 @@ public class UserController {
     }
     @RequestMapping("/all")
     public String GetUserAll(){
-
         String all = userService.SelectAll().toString();
         System.out.println(all);
         return all;
