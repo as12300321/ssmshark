@@ -1,27 +1,45 @@
 package com.shark.entity;
 
 public class User {
-    private String useName;
+/*
+* `id` int(32) NOT NULL AUTO_INCREMENT,
+  `userName` varchar(32) NOT NULL,
+  `passWord` varchar(50) NOT NULL,
+  `realName`
+* */
+    private int id;
+    private  String userName;
     private  String passWord;
-    private   String realName;
-    private  Integer id;
+    private  String realName;
+
+    public User() {
+
+    }
 
     @Override
     public String toString() {
         return "User{" +
-                "useName='" + useName + '\'' +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
                 ", passWord='" + passWord + '\'' +
                 ", realName='" + realName + '\'' +
-                ", id=" + id +
                 '}';
     }
 
-    public String getUseName() {
-        return useName;
+    public int getId() {
+        return id;
     }
 
-    public void setUseName(String useName) {
-        this.useName = useName;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassWord() {
@@ -40,11 +58,10 @@ public class User {
         this.realName = realName;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
+    public User(int id, String userName, String passWord, String realName) {
         this.id = id;
+        this.userName = userName;
+        this.passWord = passWord;
+        this.realName = realName;
     }
 }
