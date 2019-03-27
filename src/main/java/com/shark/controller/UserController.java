@@ -16,7 +16,7 @@ public class UserController {
  
     @Autowired
     private UserService userService;
- 
+
     @RequestMapping("getUser/{id}")
     public String GetUser(@PathVariable int id){
 
@@ -28,7 +28,6 @@ public class UserController {
     public String GetUserAll(){
         String all = userService.SelectAll().toString();
         System.out.println(all);
-
         return all;
     }
 }
