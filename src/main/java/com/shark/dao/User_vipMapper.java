@@ -19,6 +19,6 @@ public interface User_vipMapper {
     List<user_vip> SelectAll();
      @Insert("insert into user_vip values(#{id},#{user_name},#{password},#{phone},#{gender},#{target},#{action},#{insert_ts},#{other},#{email},#{update_ts},#{head_protrait})")
     int insertUser_vip(user_vip  user_vip);
-
+  
 
 }
