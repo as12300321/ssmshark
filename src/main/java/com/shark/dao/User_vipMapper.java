@@ -14,7 +14,7 @@ import java.util.List;
 public interface User_vipMapper {
     @Select(" SELECT * FROM user_vip  where id= #{id} ")
     User Sel(int id);
-    
+
     @Select(" SELECT * FROM user_vip ")
     List<user_vip> SelectAll();
 
