@@ -803,7 +803,7 @@
         start: true,
         animation: "smooth",
         count_past_zero: true,
-        circle_bg_color: "#60686F",
+        circle_bg_color: "#C1C1C1",
         use_background: true,
         fg_width: 0.1,
         bg_width: 1.2,
@@ -816,17 +816,17 @@
             Days: {
                 show: true,
                 text: "Days",
-                color: "#FC6"
+                color: "#C6E2FF"
             },
             Hours: {
                 show: true,
                 text: "Hours",
-                color: "#9CF"
+                color: "#FAFAD2"
             },
             Minutes: {
                 show: true,
                 text: "Minutes",
-                color: "#BFB"
+                color: "#C1FFC1"
             },
             Seconds: {
                 show: true,
