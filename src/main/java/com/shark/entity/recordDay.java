@@ -5,6 +5,7 @@ import java.util.Date;
 /**
  * Created by  Sazz
  **/
+
 public class recordDay {
     private int id;
     private String uuid;
@@ -13,6 +14,10 @@ public class recordDay {
     private  String ufalg;
     private Date update_ts;
     private Date insert_ts;
+
+    public recordDay() {
+
+    }
 
     @Override
     public String toString() {
