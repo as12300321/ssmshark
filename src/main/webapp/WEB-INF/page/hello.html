@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>hello world</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app1"></div>
+<div id="app2">{{message}}</div>
+
+<script>
+
+    // /**********原生写法************/
+    // var dom=document.getElementById("app1");
+    // dom.innerHTML="hello world";
+    //
+    //
+    // setTimeout(function(){
+    //     dom.innerHTML="bye world";
+    // },2000)
+    // /**********VUE写法************/
+    var app=new Vue({                 //创建实例
+        el:'#app2',                     //el表示实例负责的区域
+        data:{                          //数据
+            message:'hello world'
+        }
+    });
+
+    setTimeout(function(){            //定时器
+        app.$data.message="bye world";  //VUE选择器
+    },2000)
+</script>
+</body>
+</html>
