@@ -21,7 +21,7 @@
                         //发生异常
                         $("#msg").text(resultInfo.errorMsg);
                     }
-                };
+                };  
                 var type="json";
                 $.post(url,data,callback,type);
             }else{
