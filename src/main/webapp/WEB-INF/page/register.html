@@ -34,6 +34,7 @@
 
 
     </style>
+
     <style type="text/css">
         html, body {
             height: 100%;
@@ -55,9 +56,11 @@
             text-align: center;
         }
     </style>
+
 </head>
 <body>
 
+<script src="js/jquery.js"></script>
 <div style="height:80px; align-self: center"></div>
 <div class="divForm">
     <form enctype="multipart/form-data">
@@ -71,12 +74,7 @@
                 <span style="position:absolute;right:18px;top:2px;background-image:url(img/user1.png);height:16px;width:16px;display:inline-block;"></span>
             </div>
             <br/><br/>
-            <span class="p">*</span>
-            <label for="phonenumber" class="l">手机号:</label>
-            <div class="d">
-                <input id="phonenumber" type="text" class="i">
-            </div>
-            <br/><br/>
+
             <span class="c">*</span>
             <label for="login_password" class="l">登录密码:</label>
             <div class="d">
@@ -87,6 +85,28 @@
             <label for="confirm_password" class="l">确认密码:</label>
             <div class="d">
                 <input id="confirm_password" type="text" class="i">
+            </div>
+            <br/><br/>
+            <tr>
+                <td class="td_left">
+                    <label for="sex">性别</label>
+                </td>
+                <td class="td_right gender">
+                    <input type="radio" id="sex" name="sex" value="男" checked> 男
+                    <input type="radio" name="sex" value="女"> 女
+                </td>
+            </tr>
+            <br/><br/>
+            <label> 生日：</label>
+            <select class="sel_year" rel="2000"> ---</select> 年
+            <select class="sel_month" rel="2">---- </select> 月
+            <select class="sel_day" rel="14">--- </select> 日
+
+            <br/><br/>
+            <span class="p">*</span>
+            <label for="phonenumber" class="l">手机号:</label>
+            <div class="d">
+                <input id="phonenumber" type="text" class="i">
             </div>
             <br/><br/>
             <span class="p">*</span>
@@ -103,5 +123,18 @@
         </div>
     </form>
 </div>
+<script src="js/birthday.js"></script>
+
+<script>
+    $(function () {
+        $.ms_DatePicker({
+            YearSelector: ".sel_year",
+            MonthSelector: ".sel_month",
+            DaySelector: ".sel_day"
+        });
+        $.ms_DatePicker();
+    });
+</script>
 </body>
+
 </html>
