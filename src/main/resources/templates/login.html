@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shark-login</title>
+ 
+    <link rel="stylesheet" type="text/css" href="static/css/login.css"/>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+ 
+<body>
+<div id="login_frame">
+ 
+
+ 
+    <form method="post" action="login.js">
+ 			<br></br>
+        <p><label class="label_input">用户名</label><input type="text" id="username" class="text_field"/></p>
+        <p><label class="label_input">密码</label><input type="password" id="password"  class="text_field"/></p>
+ 
+        <div id="login_control">
+            <input type="button" id="btn_login" value="登录" onclick="login();"/>
+          <a id="forget_pwd" href="forget_pwd.html" style="color: #3CD8AA;font-size:15px;">忘记密码？</a>
+          
+          <br>    <p class="regist" align="right"   style="color:green;font-size:15px;"><span>没有账号?</span><a href="regist.html">立即注册</a></p></br>
+        </div>
+        
+    </form>
+</div>
+<script>
+localStorage['UserInfo'] = [namevalue, passwordvalue];
+var myunits2 = localStorage['UserInfo'];//fatch var
+localStorage.removeItem('UserInfo');//remove password
+
+</script>
+</body>
+
+</html>
