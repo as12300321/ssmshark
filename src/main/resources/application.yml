@@ -6,7 +6,8 @@ spring:
     password: Zx!12300321
     driver-class-name: com.mysql.jdbc.Driver
 server:
-  port: 8090
+  port: 8099
+
 
 #mybatis:
 #  typeAliasesPackage: com.shark.entity

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="userForm" name="userForm" method="post" action="LoginAction!saveUser.do">
+  <div class="input_row">
+    <table width="700">
+      <tbody><tr class="companyinfo">
+        <td align="right" height="56">公司名称：</td>
+        <td align="left">
+          <input type="text" id="compName" name="userForm.compName" placeholder="注册后不能修改，请与营业执照名称一致" onblur="valCompName(this.value, true);" class="reginput" style="width:420px" maxlength="30">
+          <span class="huizi" id="compNameId"></span>
+        </td>
+      </tr>
+      <tr>
+        <td width="150" align="right" height="56">用户帐号：</td>
+        <td width="550" align="left">
+          <input type="text" id="account" name="userForm.account" placeholder="请用邮箱注册，方便找回密码" onblur="valEmail(this.value, true);" class="reginput" maxlength="50"><input type="hidden" id="userType" name="userForm.userType" value="1">
+          <span style="width:100px" class="huizi" id="emailId"><img src="../images/xx.png" style="width: 12px;">&nbsp;<span class="hongzi">用户帐号不能为空！请输入用户帐号</span></span>
+        </td>
+      </tr>
+      <tr>
+        <td align="right" height="56">设置密码：</td>
+        <td align="left">
+          <input type="password" id="password" name="userForm.password" placeholder="字母、数字组合，6-20个字符" onblur="valPwd(this.value);" class="reginput" maxlength="20">
+          <span class="huizi" id="pwdId"><img src="../images/xx.png" style="width: 12px;">&nbsp;<span class="hongzi">密码不能为空！</span></span>
+        </td>
+      </tr>
+      <tr>
+        <td height="56" align="right">确认密码：</td>
+        <td align="left">
+          <input type="password" id="password2" name="password2" placeholder="请输入确认密码，要求同上" onblur="valSecPwd(this.value);" class="reginput" maxlength="20">
+          <span class="huizi" id="secPwdId"></span>
+        </td>
+      </tr>
+      <tr>
+        <td align="right" height="56">您的姓名：</td>
+        <td align="left">
+          <input type="text" id="regUserName" name="userForm.userName" placeholder="您的姓名" onblur="valName(this.value);" class="reginput" maxlength="8">
+          <span class="huizi" id="nameId"><img src="../images/xx.png" style="width: 12px;">&nbsp;<span class="hongzi">姓名不能为空</span></span>
+        </td>
+      </tr>
+      <tr>
+        <td height="56" align="right">您的手机：</td>
+        <td align="left">
+          <input type="text" id="regMobile" name="userForm.mobile" placeholder="您的手机" onblur="valMobile(this.value);" class="reginput" maxlength="11">
+          <span class="huizi" id="mobileId"><img src="../images/xx.png" style="width: 12px;">&nbsp;<span class="hongzi">您输入的手机号不合法</span></span>
+        </td>
+      </tr>
+      <tr>
+        <td align="right" height="56">验证码：</td>
+        <td align="left">
+          <input type="text" id="regValidateNumber" name="userForm.validateNumber" class="reginput" style="width:120px" maxlength="4">&nbsp;
+          <img id="imgId" src="../servlet/GetImgNumber" style="cursor:pointer" width="70" height="28" onclick="replaceImgs()" alt="验证码">
+        </td>
+      </tr>
+      <tr>
+        <td align="right" height="56"></td>
+        <td>
+          <input type="checkbox" checked="checked" id="isRead">&nbsp;我已阅读并同意<a href="/user/reg.jsp" target="_blank">服务条款</a>
+        </td>
+      </tr>
+      </tbody></table>
+  </div>
+  <div style="height: 60px; padding-top: 20px;">
+    <span class="regbutton" onclick="valSave();">注 册</span>
+  </div>
+</form>
+</body>
+</html>
